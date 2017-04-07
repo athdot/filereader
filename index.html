@@ -1,0 +1,51 @@
+<iframe id="myIframe" src="http://getprismatic.com/" style="display:none;"></iframe>
+<input type=file id=files />
+<button id="upload" onclick="start">Upload</button>
+<br>
+    <p id="title">Title:</p>
+<p id="descript">Description:</p>
+<p id="content">Contents:</p>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+function start(){
+var fileInput = $('#files');
+var uploadButton = $('#upload');
+
+uploadButton.on('click', function() {
+    if (!window.FileReader) {
+        alert('Your browser is not supported')
+    }
+    var input = fileInput.get(0);
+    
+    // Create a reader object
+    var reader = new FileReader();
+    if (input.files.length) {
+        var textFile = input.files[0];
+        reader.readAsText(textFile);
+        $(reader).on('load', processFile);
+    } else {
+        alert('Please upload a file before continuing')
+    } 
+});
+
+function processFile(e) {
+    var file = e.target.result,
+        results;
+    if (file && file.length) {
+        results = file.split("\n");
+        console.log(results)
+var filelines = results
+alert(encrytext)
+    }
+}
+var url = 'https://athdot.github.io/chk-filetype/create/' + filelines
+    var sites = [chaboi]
+    document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
+var title = document.getElementById("myIframe").contentWindow.title;
+var descript = document.getElementById("myIframe").contentWindow.descript;
+var content = document.getElementById("myIframe").contentWindow.content;
+  document.getElementById('title').innerHTML = ("Title: " + title);
+  document.getElementById('descript').innerHTML = ("Description: " + descript);
+document.getElementById('content').innerHTML = ("Contents: " + content);
+}
+</script>
