@@ -34,7 +34,15 @@ function processFile(e) {
         results = file.split("\n");
         console.log(results)
 var filelines = results
-alert(filelines)
+var chaboi = 'https://athdot.github.io/chk-filetype/create/' + filelines
+    var sites = [chaboi]
+    document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
+var title = document.getElementById("myIframe").contentWindow.title;
+var descript = document.getElementById("myIframe").contentWindow.descript;
+var content = document.getElementById("myIframe").contentWindow.content;
+  document.getElementById('title').innerHTML = ("Title: " + title);
+  document.getElementById('descript').innerHTML = ("Description: " + descript);
+document.getElementById('content').innerHTML = ("Contents: " + content);
     }
 }
 </script>
