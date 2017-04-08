@@ -1,13 +1,10 @@
-<iframe id="myIframe" src="http://getprismatic.com/"></iframe>
 <input type=file id=files />
-<button id="upload" onclick="start()">Upload</button>
-<br>
-    <p id="title">Title:</p>
-<p id="descript">Description:</p>
-<p id="content">Contents:</p>
+<button id=upload>Upload</button>
+<iframe id="carl" src="" style="border: 0px;">
+</iframe>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-var fileInput = $('#files');
+    var fileInput = $('#files');
 var uploadButton = $('#upload');
 
 uploadButton.on('click', function() {
@@ -33,8 +30,8 @@ function processFile(e) {
     if (file && file.length) {
         results = file.split("\n");
         console.log(results)
-var filelines = results
-//Add variable to parent thing here
+var characters = results
+document.getElementById('carl').src = "https://athdot.github.io/chk-filetype/create/" + characters
     }
 }
 </script>
